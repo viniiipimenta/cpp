@@ -1,5 +1,31 @@
 #include <iostream>
+#include <iomanip>
 #include "PhoneBook.hpp"
+
+void searching(PhoneBook *phonebook)
+{
+    Contact print;
+    int i;
+    int counter;
+
+    i = 0;
+    counter = phonebook->getCounter();
+    std::cout << "---------------------------------------------" << std::endl;
+    std::cout << "|" << std::setw(10) << "index" << "|";
+    std::cout << std::setw(10) << "First Name" << "|";
+    std::cout << std::setw(10) << "Last Name" << "|";
+    std::cout << std::setw(10) << "Nickname" << "|" << std::endl;
+    while (i < counter)
+    {
+        print = phonebook->getContact(i);
+        std::cout << "|" << std::setw(10) << i << "|";
+        std::cout << std::setw(10) << print.getFirst() << "|";
+        std::cout << std::setw(10) << print.getLast() << "|";
+        std::cout << std::setw(10) << print.getNick() << "|" << std::endl;
+        i++;
+    }
+    std::cout << "--------------------------------------------" << std::endl;
+}
 
 void adding(PhoneBook *phonebook)
 {
@@ -31,6 +57,7 @@ int main(void)
 
     while (1)
     {
+        std::cout << std::endl;
         std::cout << "ADD" << std::endl;
         std::cout << "SEARCH" << std::endl;
         std::cout << "EXIT" << std::endl;
@@ -39,8 +66,7 @@ int main(void)
         if (input == "ADD")
             adding(&phonebook);
         else if (input == "SEARCH")
-        {
-        }
+            searching(&phonebook);
         else if (input == "EXIT")
             break;
     }

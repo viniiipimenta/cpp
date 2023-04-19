@@ -9,9 +9,11 @@ class PhoneBook
         PhoneBook();
         Contact getContact(int index);
         void setContact(Contact contact);
+        int getCounter();
     private:
         int index;
         Contact contact[8];
+        int counter;
 };
 
 #endif
