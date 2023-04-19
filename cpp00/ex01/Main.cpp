@@ -1,21 +1,19 @@
-#include <iostream>
-#include <iomanip>
 #include "PhoneBook.hpp"
+#include <iomanip>
 
 void searching(PhoneBook *phonebook)
 {
     Contact print;
     int i;
-    int counter;
+    int input;
 
     i = 0;
-    counter = phonebook->getCounter();
     std::cout << "---------------------------------------------" << std::endl;
     std::cout << "|" << std::setw(10) << "index" << "|";
     std::cout << std::setw(10) << "First Name" << "|";
     std::cout << std::setw(10) << "Last Name" << "|";
     std::cout << std::setw(10) << "Nickname" << "|" << std::endl;
-    while (i < counter)
+    while (i < phonebook->getCounter())
     {
         print = phonebook->getContact(i);
         std::cout << "|" << std::setw(10) << i << "|";
@@ -25,6 +23,16 @@ void searching(PhoneBook *phonebook)
         i++;
     }
     std::cout << "--------------------------------------------" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Choose an index contact: ";
+    std::cin >> input;
+    print = phonebook->getContact(input);
+    std::cout << std::endl;
+    std::cout << "First name: " << print.getFirst() << std::endl;
+    std::cout << "Last name: "<< print.getLast() << std::endl;
+    std::cout << "Nickname: " << print.getNick() << std::endl;
+    std::cout << "Phone number: " << print.getPhone() << std::endl;
+    std::cout << "Darkest secret: " << print.getSecret() << std::endl;
 }
 
 void adding(PhoneBook *phonebook)

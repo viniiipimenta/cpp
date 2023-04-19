@@ -6,15 +6,16 @@ PhoneBook::PhoneBook()
     this->counter = 0;
 }
 
+int PhoneBook::getCounter()
+{
+    return this->counter;
+}
+
 Contact PhoneBook::getContact(int index)
 {
     return this->contact[index];
 }
 
-int PhoneBook::getCounter()
-{
-    return this->counter;
-}
 
 void PhoneBook::setContact(Contact contact)
 {
