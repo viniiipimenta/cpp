@@ -6,14 +6,14 @@
 class PhoneBook
 {
     public:
-        PhoneBook();
         Contact getContact(int index);
-        void setContact(Contact contact);
-        int getCounter();
+        void    setContact(Contact contact);
+        int     getCounter();
+        PhoneBook();
     private:
-        int index;
+        int     index;
+        int     counter;
         Contact contact[8];
-        int counter;
 };
 
 #endif
