@@ -1,7 +1,7 @@
-NAME = 
+NAME = Zombie
 
 
-SRCS = 
+SRCS = Zombie.cpp main.cpp zombieHorde.cpp
 
 
 OBJS = ${SRCS:.cpp=.o}
