@@ -20,7 +20,7 @@ int check(std::string str, PhoneBook *phonebook)
     if (flag == 1 && !str.empty())
     {
 		i = std::stoi(str);
-		if (i <= phonebook->getCounter() && i >= 0)
+		if (i < phonebook->getCounter() && i >= 0)
 			return 1;
     }
 	return 0;
@@ -92,6 +92,7 @@ void adding(PhoneBook *phonebook)
     std::string	input;
 
     input.clear();
+    getline(std::cin, input);
     while (input.empty())
     {
         std::cout << "Type first name: ";
