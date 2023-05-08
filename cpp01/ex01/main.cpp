@@ -4,9 +4,13 @@ Zombie* zombieHorde(int n, std::string name);
 
 int main()
 {
-    Zombie *zombie;
+    int count = 10;
+    Zombie *zombie = zombieHorde(count, "mpimenta");
 
-    //criar a main e anunciar todos eles
-    delete zombie;
+    for (size_t i = 0; i < count; i++)
+    {
+        zombie[i].announce();
+    }
+    delete [] zombie;
     return 0;
 }
