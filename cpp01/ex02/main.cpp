@@ -6,9 +6,9 @@ int main ()
     std::string *stringPTR = &str;
     std::string &stringREF = str;
 
-    std::cout << "aderess of str: " << &str << std::endl;
-    std::cout << "aderess of stringPTR: " << stringPTR << std::endl;
-    std::cout << "aderess of stringREF: " << &stringREF << std::endl;
+    std::cout << "adress of str: " << &str << std::endl;
+    std::cout << "adress of stringPTR: " << stringPTR << std::endl;
+    std::cout << "adress of stringREF: " << &stringREF << std::endl;
     std::cout << "Value of str: " << str << std::endl;
     std::cout << "Value of stringPTR: " << *stringPTR << std::endl;
     std::cout << "Value of stringREF: " << stringREF << std::endl;
