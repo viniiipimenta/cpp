@@ -7,7 +7,7 @@ int main()
     int count = 10;
     Zombie *zombie = zombieHorde(count, "mpimenta");
 
-    for (size_t i = 0; i < count; i++)
+    for (int i = 0; i < count; i++)
     {
         zombie[i].announce();
     }

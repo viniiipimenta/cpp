@@ -13,15 +13,11 @@ CC = c++
 RM = rm -f
 
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
-
-
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
+CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 
 $(NAME): ${OBJS}
-	$(CC) $(OBJS) -o $(NAME)
+	$(CC) ${CPPFLAGS} $(OBJS) -o $(NAME)
 
 
 all: ${NAME}
