@@ -1,7 +1,7 @@
-NAME = 
+NAME = Fixed
 
 
-SRCS = 
+SRCS = Fixed.cpp main.cpp
 
 
 OBJS = ${SRCS:.cpp=.o}
