@@ -7,7 +7,7 @@ SRCS = ClapTrap.cpp main.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 
-CC = c++
+CCPP = c++
 
 
 RM = rm -f
@@ -17,7 +17,7 @@ CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 
 $(NAME): ${OBJS}
-	$(CC) ${CPPFLAGS} $(OBJS) -o $(NAME)
+	$(CCPP) ${CPPFLAGS} $(OBJS) -o $(NAME)
 
 
 all: ${NAME}
